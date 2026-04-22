@@ -1,221 +1,433 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vérion Consultoria Estratégica</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vérion Consultoria Estratégica</title>
+  <meta
+    name="description"
+    content="Cartão digital premium de Juliana Rachid Calixto - Vérion Consultoria Estratégica"
+  />
 
-<style>
-body {
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: radial-gradient(circle at top, #2a1a10, #000);
-  color: #fff;
-}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-/* LAYOUT */
-.container {
-  display: flex;
-  min-height: 100vh;
-}
+  <style>
+    :root {
+      --bg-1: #120804;
+      --bg-2: #050201;
+      --gold-1: #d6b06c;
+      --gold-2: #b8873f;
+      --gold-3: #f0d39b;
+      --line: rgba(214, 176, 108, 0.22);
+      --text-soft: #eadfce;
+      --text-body: #f5f1ea;
+      --panel: rgba(7, 3, 2, 0.92);
+    }
 
-/* ESQUERDA */
-.left {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 60px;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-.left img {
-  width: 300px;
-  margin-bottom: 30px;
-}
+    html, body {
+      margin: 0;
+      min-height: 100%;
+    }
 
-.brand {
-  font-size: 54px;
-  color: #d4af6a;
-  letter-spacing: 4px;
-  font-weight: 600;
-}
+    body {
+      background:
+        radial-gradient(circle at 28% 35%, rgba(104, 54, 16, 0.28), transparent 30%),
+        radial-gradient(circle at 12% 80%, rgba(184, 135, 63, 0.14), transparent 22%),
+        linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 100%);
+      color: var(--text-body);
+      font-family: "Inter", Arial, sans-serif;
+    }
 
-.subtitle {
-  color: #c9a56a;
-  margin-bottom: 25px;
-  letter-spacing: 2px;
-}
+    .page {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 460px;
+    }
 
-.text {
-  max-width: 420px;
-  font-size: 18px;
-  color: #e6e6e6;
-}
+    .left {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 56px 48px;
+      overflow: hidden;
+    }
 
-/* DIREITA */
-.right {
-  width: 420px;
-  background: #050302;
-  border-left: 1px solid rgba(212,175,106,0.2);
-  padding: 50px 30px;
-}
+    .left::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.02), transparent 30%),
+        radial-gradient(circle at 30% 30%, rgba(214,176,108,0.06), transparent 35%);
+      pointer-events: none;
+    }
 
-/* NOME */
-.name {
-  font-size: 30px;
-  font-weight: 600;
-}
+    .brand-block {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      width: 100%;
+      text-align: center;
+    }
 
-.role {
-  color: #d4af6a;
-  margin-bottom: 35px;
-  font-size: 15px;
-}
+    .logo-wrap {
+      margin-bottom: 28px;
+    }
 
-/* ITENS */
-.item {
-  margin-bottom: 25px;
-  border-bottom: 1px solid rgba(212,175,106,0.15);
-  padding-bottom: 15px;
-}
+    .logo-wrap img {
+      width: min(340px, 48vw);
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+      filter: drop-shadow(0 10px 28px rgba(0,0,0,0.35));
+    }
 
-.label {
-  color: #d4af6a;
-  font-size: 12px;
-  margin-bottom: 5px;
-}
+    .brand-name {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(3.4rem, 6vw, 5.7rem);
+      line-height: 0.92;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--gold-1);
+      margin: 0;
+      text-wrap: balance;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.28);
+    }
 
-/* 🔥 TELEFONE MELHORADO */
-.phone {
-  font-size: 20px;
-  font-weight: 600;
-  color: #ffffff;
-  letter-spacing: 1px;
-}
+    .brand-subtitle {
+      margin-top: 10px;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(1.4rem, 2.2vw, 2.2rem);
+      line-height: 1.1;
+      font-weight: 500;
+      color: var(--gold-3);
+      letter-spacing: 0.01em;
+    }
 
-/* OUTROS TEXTOS */
-.value {
-  font-size: 15px;
-  color: #e0e0e0;
-}
+    .rule {
+      width: 120px;
+      height: 1px;
+      margin: 22px auto 20px;
+      background: linear-gradient(90deg, transparent, var(--gold-1), transparent);
+    }
 
-/* QR */
-.qr {
-  text-align: center;
-  margin: 35px 0;
-}
+    .tagline {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(1.5rem, 2.2vw, 2.2rem);
+      line-height: 1.25;
+      color: #f1ece4;
+      margin: 0 auto;
+      max-width: 560px;
+    }
 
-.qr img {
-  width: 150px;
-  background: #fff;
-  padding: 8px;
-  border-radius: 10px;
-}
+    .tagline strong {
+      color: var(--gold-1);
+      font-weight: 600;
+    }
 
-.qr-text {
-  color: #c9a56a;
-  font-size: 12px;
-  margin-top: 10px;
-}
+    .microcopy {
+      margin-top: 26px;
+      color: rgba(245, 241, 234, 0.78);
+      font-size: 0.92rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
 
-/* BOTÕES */
-.btn {
-  display: block;
-  text-align: center;
-  padding: 14px;
-  margin-bottom: 12px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.2s;
-}
+    .right {
+      background:
+        linear-gradient(180deg, rgba(9,4,2,0.98), rgba(3,1,1,0.98));
+      border-left: 1px solid var(--line);
+      padding: 42px 34px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      box-shadow: -16px 0 35px rgba(0,0,0,0.24);
+    }
 
-.btn-whats {
-  background: linear-gradient(#d4af6a, #a57c3c);
-  color: #000;
-}
+    .person-name {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 3rem;
+      line-height: 0.95;
+      font-weight: 600;
+      margin: 0;
+      color: #fff8ef;
+    }
 
-.btn-outline {
-  border: 1px solid #d4af6a;
-  color: #fff;
-}
+    .person-role {
+      margin-top: 8px;
+      font-size: 0.98rem;
+      font-weight: 500;
+      color: var(--gold-1);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
 
-.btn:hover {
-  transform: translateY(-2px);
-}
-</style>
+    .section-sep {
+      height: 1px;
+      margin: 26px 0 18px;
+      background: linear-gradient(90deg, rgba(214,176,108,0.22), rgba(214,176,108,0.05));
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 0;
+    }
+
+    .contact-item {
+      padding: 16px 0 15px;
+      border-bottom: 1px solid rgba(214,176,108,0.14);
+    }
+
+    .contact-label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--gold-1);
+      margin-bottom: 6px;
+      letter-spacing: 0.03em;
+    }
+
+    .contact-value,
+    .contact-value a {
+      color: var(--text-body);
+      text-decoration: none;
+      font-size: 1.08rem;
+      line-height: 1.4;
+      word-break: break-word;
+    }
+
+    .contact-phone {
+      font-size: 1.5rem;
+      line-height: 1.2;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      color: #fff;
+      font-variant-numeric: lining-nums;
+    }
+
+    .qr-box {
+      margin-top: 28px;
+      border: 1px solid rgba(214,176,108,0.2);
+      border-radius: 22px;
+      padding: 18px;
+      background: rgba(255,255,255,0.02);
+    }
+
+    .qr-grid {
+      display: grid;
+      grid-template-columns: 152px 1fr;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .qr-image {
+      width: 152px;
+      aspect-ratio: 1 / 1;
+      display: block;
+      background: #fff;
+      border-radius: 12px;
+      padding: 8px;
+    }
+
+    .qr-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--gold-1);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .qr-text {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: var(--text-soft);
+    }
+
+    .actions {
+      margin-top: 24px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .btn {
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 18px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(180deg, #e0bc7a 0%, #b8873f 100%);
+      color: #120804;
+      box-shadow: 0 12px 26px rgba(184,135,63,0.22);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(214,176,108,0.65);
+      color: #fffaf1;
+      background: rgba(255,255,255,0.02);
+    }
+
+    .footer-mark {
+      margin-top: 22px;
+      text-align: center;
+      color: rgba(214,176,108,0.85);
+      font-size: 0.95rem;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      letter-spacing: 0.02em;
+    }
+
+    @media (max-width: 1080px) {
+      .page {
+        grid-template-columns: 1fr;
+      }
+
+      .right {
+        border-left: none;
+        border-top: 1px solid var(--line);
+      }
+
+      .left {
+        padding: 48px 26px 40px;
+      }
+
+      .right {
+        padding: 34px 22px 28px;
+      }
+
+      .qr-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .qr-image {
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .brand-name {
+        font-size: 3.2rem;
+      }
+
+      .person-name {
+        font-size: 2.3rem;
+      }
+
+      .contact-phone {
+        font-size: 1.3rem;
+      }
+
+      .tagline {
+        font-size: 1.45rem;
+      }
+
+      .microcopy {
+        font-size: 0.78rem;
+        letter-spacing: 0.12em;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <main class="page">
+    <section class="left">
+      <div class="brand-block">
+        <div class="logo-wrap">
+          <img src="assets/logo.png" alt="Logotipo Vérion Consultoria Estratégica">
+        </div>
 
-<div class="container">
+        <h1 class="brand-name">Vérion Consultoria Estratégica</h1>
+        <div class="brand-subtitle">Estratégia Regulatória em Saúde</div>
 
-  <!-- ESQUERDA -->
-  <div class="left">
-    <img src="assets/logo.png">
+        <div class="rule"></div>
 
-    <div class="brand">VÉRION</div>
-    <div class="subtitle">CONSULTORIA ESTRATÉGICA</div>
+        <p class="tagline">
+          Consultoria que transforma estratégia em <strong>resultado</strong>.
+        </p>
 
-    <div class="text">
-      Consultoria que transforma estratégia em resultado.
-    </div>
-  </div>
+        <div class="microcopy">Estratégia • Gestão • Resultados</div>
+      </div>
+    </section>
 
-  <!-- DIREITA -->
-  <div class="right">
+    <aside class="right">
+      <h2 class="person-name">Juliana Rachid Calixto</h2>
+      <div class="person-role">Consultora Estratégica</div>
 
-    <div class="name">Juliana Rachid Calixto</div>
-    <div class="role">Consultora Estratégica</div>
+      <div class="section-sep"></div>
 
-    <!-- TELEFONE -->
-    <div class="item">
-      <div class="label">Telefone / WhatsApp</div>
-      <div class="phone">19 98945-7404</div>
-    </div>
+      <div class="contact-list">
+        <div class="contact-item">
+          <div class="contact-label">Telefone / WhatsApp</div>
+          <div class="contact-value contact-phone">
+            <a href="https://wa.me/5519989457404" target="_blank" rel="noopener noreferrer">19 98945-7404</a>
+          </div>
+        </div>
 
-    <!-- EMAIL -->
-    <div class="item">
-      <div class="label">E-mail</div>
-      <div class="value">juliana@verionconsultoria.com.br</div>
-    </div>
+        <div class="contact-item">
+          <div class="contact-label">E-mail</div>
+          <div class="contact-value">
+            <a href="mailto:juliana@verionconsultoria.com.br">juliana@verionconsultoria.com.br</a>
+          </div>
+        </div>
 
-    <!-- SITE -->
-    <div class="item">
-      <div class="label">Site</div>
-      <div class="value">www.verionconsultoria.com.br</div>
-    </div>
+        <div class="contact-item">
+          <div class="contact-label">Site</div>
+          <div class="contact-value">
+            <a href="https://www.verionconsultoria.com.br" target="_blank" rel="noopener noreferrer">www.verionconsultoria.com.br</a>
+          </div>
+        </div>
 
-    <!-- LOCAL -->
-    <div class="item">
-      <div class="label">Localização</div>
-      <div class="value">Campinas - SP, Brasil</div>
-    </div>
+        <div class="contact-item">
+          <div class="contact-label">Localização</div>
+          <div class="contact-value">Campinas - SP, Brasil</div>
+        </div>
+      </div>
 
-    <!-- QR -->
-    <div class="qr">
-      <img src="assets/qrcode.png">
-      <div class="qr-text">Escaneie o QR Code</div>
-    </div>
+      <div class="qr-box">
+        <div class="qr-grid">
+          <img class="qr-image" src="assets/qrcode.png" alt="QR Code de contato">
+          <div>
+            <div class="qr-title">Escaneie o QR Code</div>
+            <div class="qr-text">Salve meu contato ou acesse rapidamente meus canais de atendimento.</div>
+          </div>
+        </div>
+      </div>
 
-    <!-- BOTÕES -->
-    <a class="btn btn-whats" href="https://wa.me/5519989457404" target="_blank">
-      FALAR NO WHATSAPP
-    </a>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://wa.me/5519989457404" target="_blank" rel="noopener noreferrer">
+          Falar no WhatsApp
+        </a>
 
-    <a class="btn btn-outline" href="mailto:juliana@verionconsultoria.com.br">
-      ENVIAR E-MAIL
-    </a>
+        <a class="btn btn-secondary" href="mailto:juliana@verionconsultoria.com.br">
+          Enviar e-mail
+        </a>
 
-    <a class="btn btn-outline" href="https://www.verionconsultoria.com.br" target="_blank">
-      ACESSAR SITE
-    </a>
+        <a class="btn btn-secondary" href="https://www.verionconsultoria.com.br" target="_blank" rel="noopener noreferrer">
+          Acessar site
+        </a>
+      </div>
 
-  </div>
-
-</div>
-
+      <div class="footer-mark">© Vérion Consultoria Estratégica</div>
+    </aside>
+  </main>
 </body>
 </html>
