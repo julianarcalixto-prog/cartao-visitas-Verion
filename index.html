@@ -18,16 +18,17 @@
   <style>
     :root {
       --page-bg: #e7e0d4;
-      --card-bg: #f6f0e6;
-      --card-bg-2: #f2eadf;
+      --card-bg: #f7f1e7;
+      --card-bg-2: #f1e9dc;
       --brown-1: #4b3222;
       --brown-2: #68472f;
       --brown-3: #8d6b49;
       --gold-1: #c99d5e;
       --gold-2: #ab7a3e;
+      --gold-3: #e7c98f;
       --line: rgba(171, 122, 62, 0.22);
-      --shadow: 0 26px 64px rgba(71, 50, 33, 0.14);
-      --radius: 30px;
+      --shadow: 0 26px 70px rgba(71, 50, 33, 0.16);
+      --radius: 32px;
     }
 
     * {
@@ -41,25 +42,25 @@
 
     body {
       background:
-        radial-gradient(circle at top left, rgba(255,255,255,0.72), transparent 24%),
+        radial-gradient(circle at top left, rgba(255,255,255,0.78), transparent 24%),
         linear-gradient(135deg, #efe7db 0%, var(--page-bg) 100%);
       font-family: "Inter", Arial, sans-serif;
       color: var(--brown-1);
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      padding: 18px;
     }
 
     .shell {
       width: 100%;
-      max-width: 560px;
+      max-width: 480px;
     }
 
     .card {
       position: relative;
       background:
-        radial-gradient(circle at top left, rgba(255,255,255,0.58), transparent 24%),
+        radial-gradient(circle at top left, rgba(255,255,255,0.62), transparent 24%),
         linear-gradient(180deg, var(--card-bg) 0%, var(--card-bg-2) 100%);
       border: 1px solid rgba(171, 122, 62, 0.18);
       border-radius: var(--radius);
@@ -70,40 +71,40 @@
     .card::before {
       content: "";
       position: absolute;
-      inset: 12px;
-      border: 1px solid rgba(171, 122, 62, 0.13);
-      border-radius: 20px;
+      inset: 10px;
+      border: 1px solid rgba(171, 122, 62, 0.12);
+      border-radius: 22px;
       pointer-events: none;
     }
 
     .inner {
       position: relative;
       z-index: 1;
-      padding: 30px 20px 22px;
+      padding: 26px 18px 20px;
     }
 
     .hero {
       text-align: center;
-      padding-bottom: 26px;
+      padding-bottom: 18px;
     }
 
     .logo {
-      width: min(340px, 80vw);
+      width: min(320px, 76vw);
       max-width: 100%;
       display: block;
-      margin: 0 auto 26px;
+      margin: 0 auto 12px;
       filter: drop-shadow(0 8px 18px rgba(93, 67, 42, 0.12));
     }
 
     .brand {
       margin: 0;
       font-family: "Cormorant Garamond", Georgia, serif;
-      font-size: clamp(2.8rem, 8.2vw, 4.2rem);
-      line-height: 0.94;
+      font-size: clamp(3rem, 9vw, 4.5rem);
+      line-height: 0.9;
       font-weight: 600;
       color: var(--brown-2);
       letter-spacing: 0.01em;
-      text-shadow: 0 1px 0 rgba(255,255,255,0.34);
+      text-shadow: 0 1px 0 rgba(255,255,255,0.32);
     }
 
     .ornament {
@@ -111,8 +112,8 @@
       align-items: center;
       justify-content: center;
       gap: 12px;
-      margin: 18px auto 14px;
-      max-width: 300px;
+      margin: 16px auto 12px;
+      max-width: 260px;
       color: var(--gold-2);
     }
 
@@ -133,18 +134,18 @@
     .subtitle {
       margin: 0;
       font-family: "Cormorant Garamond", Georgia, serif;
-      font-size: clamp(1.6rem, 5vw, 2.2rem);
+      font-size: clamp(1.55rem, 4.8vw, 2.1rem);
       line-height: 1.08;
       font-weight: 500;
       color: var(--brown-3);
     }
 
     .tagline {
-      margin: 20px auto 0;
-      max-width: 430px;
+      margin: 16px auto 0;
+      max-width: 360px;
       font-family: "Cormorant Garamond", Georgia, serif;
-      font-size: clamp(1.28rem, 4.3vw, 1.8rem);
-      line-height: 1.28;
+      font-size: clamp(1.2rem, 4vw, 1.6rem);
+      line-height: 1.24;
       color: var(--brown-2);
     }
 
@@ -154,17 +155,17 @@
     }
 
     .microcopy {
-      margin-top: 18px;
-      font-size: 0.78rem;
-      letter-spacing: 0.20em;
+      margin-top: 14px;
+      font-size: 0.74rem;
+      letter-spacing: 0.19em;
       text-transform: uppercase;
       color: var(--brown-3);
-      opacity: 0.92;
+      opacity: 0.9;
     }
 
     .divider {
       height: 1px;
-      margin: 20px 0 18px;
+      margin: 16px 0 14px;
       background: linear-gradient(90deg, transparent, var(--line), transparent);
     }
 
@@ -176,39 +177,39 @@
     .person-name {
       margin: 0;
       font-family: "Cormorant Garamond", Georgia, serif;
-      font-size: clamp(2.2rem, 7vw, 3.2rem);
+      font-size: clamp(2.2rem, 7vw, 3rem);
       line-height: 0.95;
       font-weight: 600;
       color: var(--brown-1);
     }
 
     .person-role {
-      margin-top: 6px;
+      margin-top: 4px;
       font-family: "Cormorant Garamond", Georgia, serif;
-      font-size: 1.15rem;
+      font-size: 1.08rem;
       color: var(--gold-2);
     }
 
     .contact-list {
-      margin-top: 18px;
+      margin-top: 16px;
       display: grid;
       gap: 0;
     }
 
     .contact-item {
       display: grid;
-      grid-template-columns: 56px 1fr;
+      grid-template-columns: 52px 1fr;
       gap: 12px;
       align-items: center;
-      padding: 13px 0;
+      padding: 12px 0;
       border-bottom: 1px solid var(--line);
     }
 
     .icon-circle {
-      width: 50px;
-      height: 50px;
+      width: 46px;
+      height: 46px;
       border-radius: 50%;
-      border: 1.8px solid rgba(201, 157, 94, 0.70);
+      border: 1.6px solid rgba(201, 157, 94, 0.72);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -217,8 +218,8 @@
     }
 
     .icon-circle svg {
-      width: 22px;
-      height: 22px;
+      width: 20px;
+      height: 20px;
       stroke: currentColor;
       fill: none;
       stroke-width: 1.9;
@@ -229,24 +230,24 @@
 
     .label {
       font-family: "Cormorant Garamond", Georgia, serif;
-      font-size: 1.05rem;
+      font-size: 1rem;
       color: var(--brown-2);
-      margin-bottom: 2px;
+      margin-bottom: 1px;
     }
 
     .value,
     .value a {
       color: var(--brown-1);
       text-decoration: none;
-      font-size: 1rem;
-      line-height: 1.38;
+      font-size: 0.98rem;
+      line-height: 1.35;
       word-break: break-word;
     }
 
     .phone,
     .phone a {
       font-family: "Inter", Arial, sans-serif;
-      font-size: 1.45rem;
+      font-size: 1.38rem;
       font-weight: 700;
       color: var(--brown-1);
       letter-spacing: 0.02em;
@@ -254,15 +255,15 @@
 
     .qr-box {
       display: grid;
-      grid-template-columns: 124px 1fr;
+      grid-template-columns: 112px 1fr;
       gap: 14px;
       align-items: center;
-      margin-top: 18px;
-      padding-top: 4px;
+      margin-top: 16px;
+      padding-top: 2px;
     }
 
     .qr-image {
-      width: 124px;
+      width: 112px;
       aspect-ratio: 1 / 1;
       display: block;
       background: #fff;
@@ -275,26 +276,26 @@
 
     .qr-title {
       font-family: "Cormorant Garamond", Georgia, serif;
-      font-size: 1.08rem;
+      font-size: 1.04rem;
       color: var(--gold-2);
       margin-bottom: 4px;
     }
 
     .qr-text {
       font-family: "Cormorant Garamond", Georgia, serif;
-      font-size: 0.98rem;
-      line-height: 1.42;
+      font-size: 0.96rem;
+      line-height: 1.38;
       color: var(--brown-2);
     }
 
     .actions {
-      margin-top: 20px;
+      margin-top: 18px;
       display: grid;
       gap: 10px;
     }
 
     .btn {
-      min-height: 54px;
+      min-height: 52px;
       border-radius: 12px;
       text-decoration: none;
       display: flex;
@@ -302,7 +303,7 @@
       justify-content: center;
       padding: 0 14px;
       font-family: "Cormorant Garamond", Georgia, serif;
-      font-size: 1.18rem;
+      font-size: 1.14rem;
       font-weight: 700;
       letter-spacing: 0.01em;
       transition: transform 0.18s ease, box-shadow 0.18s ease;
@@ -320,7 +321,7 @@
     }
 
     .btn-secondary {
-      background: rgba(255,255,255,0.46);
+      background: rgba(255,255,255,0.50);
       color: var(--brown-1);
       border: 1px solid rgba(166, 120, 62, 0.34);
     }
@@ -338,8 +339,8 @@
     }
 
     .btn-icon svg {
-      width: 18px;
-      height: 18px;
+      width: 17px;
+      height: 17px;
       stroke: currentColor;
       fill: none;
       stroke-width: 2;
@@ -349,17 +350,17 @@
     }
 
     .footer {
-      margin-top: 18px;
+      margin-top: 16px;
       text-align: center;
       font-family: "Cormorant Garamond", Georgia, serif;
       color: var(--brown-3);
-      font-size: 0.92rem;
+      font-size: 0.88rem;
     }
 
     .share-tip {
-      margin-top: 12px;
+      margin-top: 10px;
       text-align: center;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       color: var(--brown-3);
     }
 
@@ -373,16 +374,16 @@
       }
 
       .logo {
-        width: 75vw;
-        margin-bottom: 22px;
+        width: 78vw;
+        margin-bottom: 14px;
       }
 
       .brand {
-        font-size: 2.5rem;
+        font-size: 2.6rem;
       }
 
       .subtitle {
-        font-size: 1.45rem;
+        font-size: 1.4rem;
       }
 
       .person-name {
@@ -391,7 +392,7 @@
 
       .phone,
       .phone a {
-        font-size: 1.28rem;
+        font-size: 1.22rem;
       }
 
       .qr-box {
