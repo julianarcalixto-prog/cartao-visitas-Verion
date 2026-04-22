@@ -1,261 +1,342 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vérion Consultoria Estratégica</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vérion Consultoria Estratégica</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <meta name="description" content="Vérion Consultoria Estratégica - Juliana Rachid Calixto">
+  <meta property="og:title" content="Vérion Consultoria Estratégica">
+  <meta property="og:description" content="Estratégia Regulatória em Saúde">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/logo.png">
 
-<style>
-body{
-  margin:0;
-  font-family:'Inter', sans-serif;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  min-height:100vh;
-  background:
-    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.3) 0%, transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(0,0,0,0.03) 0%, transparent 40%),
-    linear-gradient(#d8cfc2, #d8cfc2);
-}
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-.card{
-  width:380px;
-  background:#efe7db;
-  border-radius:28px;
-  padding:32px 24px;
-  box-shadow:0 30px 70px rgba(0,0,0,0.12);
-  border:1px solid rgba(0,0,0,0.05);
-}
+  <style>
+    body{
+      margin:0;
+      font-family:'Inter', sans-serif;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,0.30) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(0,0,0,0.03) 0%, transparent 40%),
+        linear-gradient(#d8cfc2, #d8cfc2);
+      padding:20px;
+    }
 
-/* CAIXA DO LOGO */
-.logo-wrap{
-  width:180px;
-  height:140px;
-  margin:0 auto 18px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-}
+    .card{
+      width:380px;
+      max-width:100%;
+      background:#efe7db;
+      border-radius:28px;
+      padding:32px 24px;
+      box-shadow:0 30px 70px rgba(0,0,0,0.12);
+      border:1px solid rgba(0,0,0,0.05);
+    }
 
-/* LOGO REALMENTE AMPLIADO */
-.logo{
-  width:180px;
-  display:block;
-  transform: scale(2.2);
-  transform-origin:center center;
-  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.08));
-}
+    .logo-wrap{
+      width:200px;
+      height:170px;
+      margin:0 auto 20px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
 
-h1{
-  font-family:'Playfair Display', serif;
-  font-size:28px;
-  text-align:center;
-  color:#5a3b24;
-  margin:0 0 14px;
-  line-height:1.15;
-}
+    .logo{
+      width:170px;
+      transform:scale(2.0);
+      transform-origin:center center;
+      filter:drop-shadow(0 6px 14px rgba(0,0,0,0.12));
+      display:block;
+    }
 
-.sub{
-  text-align:center;
-  font-size:14px;
-  color:#a67843;
-  margin-bottom:16px;
-}
+    h1{
+      font-family:'Playfair Display', serif;
+      font-size:28px;
+      text-align:center;
+      color:#5a3b24;
+      margin:0 0 14px;
+      line-height:1.15;
+    }
 
-.desc{
-  text-align:center;
-  font-size:14px;
-  color:#6b5644;
-  margin-bottom:10px;
-}
+    .sub{
+      text-align:center;
+      font-size:14px;
+      color:#a67843;
+      margin-bottom:16px;
+    }
 
-.desc span{
-  color:#a67843;
-  font-weight:500;
-}
+    .desc{
+      text-align:center;
+      font-size:14px;
+      color:#6b5644;
+      margin-bottom:10px;
+      line-height:1.45;
+    }
 
-.tag{
-  text-align:center;
-  font-size:11px;
-  letter-spacing:2px;
-  color:#a99b8a;
-  margin-bottom:22px;
-}
+    .desc span{
+      color:#a67843;
+      font-weight:500;
+    }
 
-.name{
-  text-align:center;
-  font-family:'Playfair Display', serif;
-  font-size:20px;
-  color:#5a3b24;
-  margin-bottom:4px;
-}
+    .tag{
+      text-align:center;
+      font-size:11px;
+      letter-spacing:2px;
+      color:#a99b8a;
+      margin-bottom:22px;
+    }
 
-.role{
-  text-align:center;
-  font-size:13px;
-  color:#a67843;
-  margin-bottom:18px;
-}
+    .name{
+      text-align:center;
+      font-family:'Playfair Display', serif;
+      font-size:20px;
+      color:#5a3b24;
+      margin-bottom:4px;
+      line-height:1.2;
+    }
 
-.item{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  padding:12px 0;
-  border-top:1px solid rgba(0,0,0,0.05);
-}
+    .role{
+      text-align:center;
+      font-size:13px;
+      color:#a67843;
+      margin-bottom:18px;
+    }
 
-.icon{
-  width:38px;
-  height:38px;
-  border:1px solid #d7b896;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#a67843;
-  font-size:14px;
-  flex-shrink:0;
-}
+    .item{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      padding:12px 0;
+      border-top:1px solid rgba(0,0,0,0.05);
+    }
 
-.text small{
-  display:block;
-  font-size:12px;
-  color:#a67843;
-}
+    .icon{
+      width:38px;
+      height:38px;
+      border:1px solid #d7b896;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#a67843;
+      font-size:14px;
+      flex-shrink:0;
+      background:rgba(255,255,255,0.35);
+    }
 
-.text strong{
-  font-size:15px;
-  color:#3d2a1d;
-}
+    .text small{
+      display:block;
+      font-size:12px;
+      color:#a67843;
+      margin-bottom:2px;
+    }
 
-.phone{
-  font-size:18px;
-  font-weight:600;
-  letter-spacing:0.5px;
-}
+    .text strong{
+      font-size:15px;
+      color:#3d2a1d;
+      font-weight:500;
+      word-break:break-word;
+    }
 
-.qr-box{
-  margin:20px 0;
-  padding:14px;
-  background:#f7f2ea;
-  border-radius:14px;
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
+    .phone{
+      font-size:18px !important;
+      font-weight:700 !important;
+      letter-spacing:0.5px;
+      font-family:'Inter', sans-serif !important;
+      color:#2f1d10 !important;
+    }
 
-.qr-box img{
-  width:90px;
-  border-radius:10px;
-}
+    .qr-box{
+      margin:20px 0;
+      padding:14px;
+      background:#f7f2ea;
+      border-radius:14px;
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
 
-.qr-text{
-  font-size:12px;
-  color:#7b5d3c;
-}
+    .qr-box img{
+      width:90px;
+      border-radius:10px;
+      background:#fff;
+      padding:4px;
+      border:1px solid rgba(0,0,0,0.06);
+      flex-shrink:0;
+    }
 
-.btn{
-  display:block;
-  text-align:center;
-  padding:14px;
-  border-radius:10px;
-  margin-bottom:10px;
-  text-decoration:none;
-  font-size:14px;
-}
+    .qr-text{
+      font-size:12px;
+      color:#7b5d3c;
+      line-height:1.45;
+    }
 
-.btn-main{
-  background:linear-gradient(135deg,#cfa96b,#b78a45);
-  color:#fff;
-  font-weight:600;
-}
+    .btn{
+      display:block;
+      text-align:center;
+      padding:14px;
+      border-radius:10px;
+      margin-bottom:10px;
+      text-decoration:none;
+      font-size:14px;
+      transition:0.3s ease;
+      position:relative;
+    }
 
-.btn-sec{
-  border:1px solid #d7b896;
-  color:#5a3b24;
-}
+    .btn-main{
+      background:linear-gradient(135deg,#cfa96b,#b78a45);
+      color:#fff;
+      font-weight:600;
+      overflow:hidden;
+      box-shadow:0 6px 20px rgba(183,138,69,0.35);
+    }
 
-.footer{
-  text-align:center;
-  font-size:11px;
-  color:#a99b8a;
-  margin-top:12px;
-}
-</style>
+    .btn-main::before{
+      content:'';
+      position:absolute;
+      top:0;
+      left:-75%;
+      width:50%;
+      height:100%;
+      background:linear-gradient(
+        120deg,
+        rgba(255,255,255,0) 0%,
+        rgba(255,255,255,0.6) 50%,
+        rgba(255,255,255,0) 100%
+      );
+      transform:skewX(-20deg);
+      transition:0.6s;
+    }
+
+    .btn-main:hover::before{
+      left:120%;
+    }
+
+    .btn-sec{
+      border:1px solid #d7b896;
+      color:#5a3b24;
+      background:rgba(255,255,255,0.18);
+    }
+
+    .btn-sec:hover{
+      background:#f4ede4;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .footer{
+      text-align:center;
+      font-size:11px;
+      color:#a99b8a;
+      margin-top:12px;
+    }
+
+    @media (max-width: 420px){
+      body{
+        padding:12px;
+      }
+
+      .card{
+        padding:24px 16px;
+      }
+
+      .logo-wrap{
+        width:180px;
+        height:150px;
+      }
+
+      .logo{
+        width:150px;
+        transform:scale(1.9);
+      }
+
+      h1{
+        font-size:24px;
+      }
+
+      .phone{
+        font-size:17px !important;
+      }
+
+      .qr-box{
+        flex-direction:column;
+        text-align:center;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="card">
+  <div class="card">
 
-<div class="logo-wrap">
-  <img src="assets/logo.png" class="logo" alt="Logotipo Vérion">
-</div>
+    <div class="logo-wrap">
+      <img src="assets/logo.png" class="logo" alt="Logotipo Vérion">
+    </div>
 
-<h1>Vérion Consultoria Estratégica</h1>
+    <h1>Vérion Consultoria Estratégica</h1>
 
-<div class="sub">Estratégia Regulatória em Saúde</div>
+    <div class="sub">Estratégia Regulatória em Saúde</div>
 
-<div class="desc">
-Consultoria que transforma estratégia em <span>resultado</span>.
-</div>
+    <div class="desc">
+      Consultoria que transforma estratégia em <span>resultado</span>.
+    </div>
 
-<div class="tag">ESTRATÉGIA • GESTÃO • RESULTADOS</div>
+    <div class="tag">ESTRATÉGIA • GESTÃO • RESULTADOS</div>
 
-<div class="name">Juliana Rachid Calixto</div>
-<div class="role">Consultora Estratégica</div>
+    <div class="name">Juliana Rachid Calixto</div>
+    <div class="role">Consultora Estratégica</div>
 
-<div class="item">
-  <div class="icon">☎</div>
-  <div class="text">
-    <small>Telefone / WhatsApp</small>
-    <strong class="phone">19 98945-7404</strong>
+    <div class="item">
+      <div class="icon">☎</div>
+      <div class="text">
+        <small>Telefone / WhatsApp</small>
+        <strong class="phone">19 98945-7404</strong>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="icon">✉</div>
+      <div class="text">
+        <small>E-mail</small>
+        <strong>juliana@verionconsultoria.com.br</strong>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="icon">🌐</div>
+      <div class="text">
+        <small>Site</small>
+        <strong>www.verionconsultoria.com.br</strong>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="icon">📍</div>
+      <div class="text">
+        <small>Localização</small>
+        <strong>Campinas - SP, Brasil</strong>
+      </div>
+    </div>
+
+    <div class="qr-box">
+      <img src="assets/qrcode.png" alt="QR Code">
+      <div class="qr-text">
+        Escaneie o QR Code e salve meu contato
+      </div>
+    </div>
+
+    <a href="https://wa.me/5519989457404" class="btn btn-main">Falar no WhatsApp</a>
+    <a href="mailto:juliana@verionconsultoria.com.br" class="btn btn-sec">Enviar e-mail</a>
+    <a href="https://www.verionconsultoria.com.br" class="btn btn-sec">Acessar site</a>
+
+    <div class="footer">© Vérion Consultoria Estratégica</div>
+
   </div>
-</div>
-
-<div class="item">
-  <div class="icon">✉</div>
-  <div class="text">
-    <small>E-mail</small>
-    <strong>juliana@verionconsultoria.com.br</strong>
-  </div>
-</div>
-
-<div class="item">
-  <div class="icon">🌐</div>
-  <div class="text">
-    <small>Site</small>
-    <strong>www.verionconsultoria.com.br</strong>
-  </div>
-</div>
-
-<div class="item">
-  <div class="icon">📍</div>
-  <div class="text">
-    <small>Localização</small>
-    <strong>Campinas - SP, Brasil</strong>
-  </div>
-</div>
-
-<div class="qr-box">
-  <img src="assets/qrcode.png" alt="QR Code">
-  <div class="qr-text">
-    Escaneie o QR Code e salve meu contato
-  </div>
-</div>
-
-<a href="https://wa.me/5519989457404" class="btn btn-main">Falar no WhatsApp</a>
-<a href="mailto:juliana@verionconsultoria.com.br" class="btn btn-sec">Enviar e-mail</a>
-<a href="https://www.verionconsultoria.com.br" class="btn btn-sec">Acessar site</a>
-
-<div class="footer">© Vérion Consultoria Estratégica</div>
-
-</div>
 
 </body>
 </html>
