@@ -15,15 +15,17 @@
 
   <style>
     :root {
-      --bg: #f4efe4;
-      --bg-2: #efe7d8;
-      --brown-1: #4e3423;
-      --brown-2: #6d4b33;
-      --brown-3: #8e6844;
-      --gold-1: #c49a5c;
+      --bg-main: #f5efe5;
+      --bg-soft: #f1e9dc;
+      --bg-panel: rgba(250, 245, 236, 0.88);
+      --brown-1: #4f3524;
+      --brown-2: #6c4b33;
+      --brown-3: #8b6847;
+      --gold-1: #c59c61;
       --gold-2: #a97a3d;
-      --gold-3: #e4c58f;
-      --line: rgba(169, 122, 61, 0.34);
+      --gold-3: #e6c894;
+      --line: rgba(169, 122, 61, 0.28);
+      --shadow: 0 18px 40px rgba(92, 65, 42, 0.10);
     }
 
     * {
@@ -37,8 +39,8 @@
 
     body {
       background:
-        radial-gradient(circle at top left, rgba(255,255,255,0.6), transparent 24%),
-        linear-gradient(135deg, var(--bg) 0%, var(--bg-2) 100%);
+        radial-gradient(circle at top left, rgba(255,255,255,0.8), transparent 24%),
+        linear-gradient(135deg, var(--bg-main) 0%, var(--bg-soft) 100%);
       color: var(--brown-1);
       font-family: "Inter", Arial, sans-serif;
     }
@@ -55,6 +57,15 @@
       justify-content: center;
       padding: 56px 50px;
       position: relative;
+      overflow: hidden;
+    }
+
+    .left::before {
+      content: "";
+      position: absolute;
+      inset: 24px 24px 24px 24px;
+      border: 1px solid rgba(169, 122, 61, 0.18);
+      pointer-events: none;
     }
 
     .left::after {
@@ -71,6 +82,8 @@
       width: 100%;
       max-width: 920px;
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
 
     .logo-wrap {
@@ -82,6 +95,7 @@
       max-width: 100%;
       display: block;
       margin: 0 auto;
+      filter: drop-shadow(0 6px 16px rgba(80, 54, 31, 0.08));
     }
 
     .brand-name {
@@ -91,7 +105,7 @@
       font-weight: 600;
       margin: 0;
       color: var(--brown-2);
-      text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+      text-shadow: 0 1px 0 rgba(255,255,255,0.45);
     }
 
     .ornament-line {
@@ -113,7 +127,6 @@
 
     .ornament-dot {
       color: var(--gold-2);
-      line-height: 1;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -151,19 +164,35 @@
     .microcopy {
       margin-top: 28px;
       color: var(--brown-2);
-      opacity: 0.9;
+      opacity: 0.92;
       font-size: 1rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
     }
 
     .right {
-      background: rgba(255, 250, 243, 0.82);
+      background: var(--bg-panel);
       padding: 44px 34px 34px;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       box-shadow: -10px 0 30px rgba(77, 52, 35, 0.05);
+      border-left: 1px solid rgba(169, 122, 61, 0.18);
+      position: relative;
+    }
+
+    .right::before {
+      content: "";
+      position: absolute;
+      inset: 16px;
+      border: 1px solid rgba(169, 122, 61, 0.22);
+      border-radius: 18px;
+      pointer-events: none;
+    }
+
+    .right > * {
+      position: relative;
+      z-index: 1;
     }
 
     .person-name {
@@ -234,6 +263,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      background: rgba(255,255,255,0.35);
     }
 
     .icon-circle svg {
@@ -266,7 +296,7 @@
     .contact-phone,
     .contact-phone a {
       font-family: "Cormorant Garamond", Georgia, serif;
-      font-size: 1.55rem;
+      font-size: 1.65rem;
       font-weight: 700;
       color: var(--brown-1);
       letter-spacing: 0.02em;
@@ -340,7 +370,7 @@
 
     .btn-secondary {
       border: 1px solid rgba(169, 122, 61, 0.45);
-      background: rgba(255,255,255,0.32);
+      background: rgba(255,255,255,0.42);
       color: var(--brown-1);
     }
 
@@ -391,6 +421,7 @@
 
       .right {
         border-top: 1px solid var(--line);
+        border-left: none;
       }
     }
 
