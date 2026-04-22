@@ -8,11 +8,12 @@
 <style>
 body {
   margin: 0;
-  font-family: Georgia, serif;
-  background: radial-gradient(circle at top, #2b1b12, #0d0704);
+  font-family: "Georgia", serif;
+  background: radial-gradient(circle at top, #2a1a10, #000);
   color: #fff;
 }
 
+/* LAYOUT */
 .container {
   display: flex;
   min-height: 100vh;
@@ -22,20 +23,40 @@ body {
 .left {
   flex: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  padding: 40px;
 }
 
 .left img {
-  max-width: 340px;
+  width: 320px;
+  margin-bottom: 30px;
+}
+
+.brand {
+  font-size: 46px;
+  color: #d4af6a;
+  letter-spacing: 3px;
+}
+
+.subtitle {
+  color: #c9a56a;
+  margin-bottom: 25px;
+}
+
+.text {
+  max-width: 380px;
+  line-height: 1.6;
 }
 
 /* LADO DIREITO */
 .right {
   width: 420px;
+  background: #070403;
+  border-left: 1px solid rgba(212,175,106,0.2);
   padding: 40px 30px;
-  background: linear-gradient(180deg, #120a06, #1c120c);
-  border-left: 1px solid rgba(255, 215, 160, 0.15);
 }
 
 /* NOME */
@@ -45,18 +66,20 @@ body {
 }
 
 .role {
-  color: #c9a56a;
-  margin-bottom: 25px;
+  color: #d4af6a;
+  margin-bottom: 30px;
 }
 
-/* CONTATO */
+/* ITENS */
 .item {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid rgba(212,175,106,0.15);
+  padding-bottom: 15px;
 }
 
 .label {
+  color: #d4af6a;
   font-size: 13px;
-  color: #c9a56a;
 }
 
 .value {
@@ -70,7 +93,7 @@ body {
 }
 
 .qr img {
-  width: 140px;
+  width: 150px;
   background: #fff;
   padding: 8px;
   border-radius: 10px;
@@ -88,12 +111,12 @@ body {
 }
 
 .btn-whats {
-  background: linear-gradient(#caa45f, #9c7738);
+  background: linear-gradient(#d4af6a, #a57c3c);
   color: #000;
 }
 
 .btn-outline {
-  border: 1px solid #caa45f;
+  border: 1px solid #d4af6a;
   color: #fff;
 }
 </style>
@@ -103,16 +126,23 @@ body {
 
 <div class="container">
 
-  <!-- ESQUERDA (LOGO) -->
+  <!-- ESQUERDA -->
   <div class="left">
     <img src="assets/logo.png">
+
+    <div class="brand">VÉRION</div>
+    <div class="subtitle">CONSULTORIA ESTRATÉGICA</div>
+
+    <div class="text">
+      Consultoria que transforma estratégia em resultado.
+    </div>
   </div>
 
-  <!-- DIREITA (INFORMAÇÕES) -->
+  <!-- DIREITA -->
   <div class="right">
 
     <div class="name">Juliana Rachid Calixto</div>
-    <div class="role">Especialista em Estratégia Regulatória</div>
+    <div class="role">Consultora Estratégica</div>
 
     <div class="item">
       <div class="label">Telefone / WhatsApp</div>
@@ -131,13 +161,13 @@ body {
 
     <div class="item">
       <div class="label">Localização</div>
-      <div class="value">Campinas, SP - Brasil</div>
+      <div class="value">Campinas - SP, Brasil</div>
     </div>
 
     <div class="qr">
       <img src="assets/qrcode.png">
-      <div style="font-size:12px; color:#c9a56a; margin-top:10px;">
-        Escaneie para salvar contato
+      <div style="color:#d4af6a; font-size:12px; margin-top:10px;">
+        Escaneie o QR Code
       </div>
     </div>
 
