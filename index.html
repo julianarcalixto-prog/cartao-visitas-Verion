@@ -8,11 +8,12 @@
 <style>
 body {
   margin: 0;
-  font-family: Georgia, serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   background: radial-gradient(circle at top, #2a1a10, #000);
   color: #fff;
 }
 
+/* LAYOUT */
 .container {
   display: flex;
   min-height: 100vh;
@@ -30,25 +31,27 @@ body {
 }
 
 .left img {
-  width: 360px;
+  width: 300px;
   margin-bottom: 30px;
 }
 
 .brand {
-  font-size: 52px;
+  font-size: 54px;
   color: #d4af6a;
   letter-spacing: 4px;
+  font-weight: 600;
 }
 
 .subtitle {
   color: #c9a56a;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
 }
 
 .text {
   max-width: 420px;
-  line-height: 1.6;
   font-size: 18px;
+  color: #e6e6e6;
 }
 
 /* DIREITA */
@@ -59,13 +62,16 @@ body {
   padding: 50px 30px;
 }
 
+/* NOME */
 .name {
   font-size: 30px;
+  font-weight: 600;
 }
 
 .role {
   color: #d4af6a;
   margin-bottom: 35px;
+  font-size: 15px;
 }
 
 /* ITENS */
@@ -77,11 +83,22 @@ body {
 
 .label {
   color: #d4af6a;
-  font-size: 13px;
+  font-size: 12px;
+  margin-bottom: 5px;
 }
 
+/* 🔥 TELEFONE MELHORADO */
+.phone {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+/* OUTROS TEXTOS */
 .value {
-  font-size: 17px;
+  font-size: 15px;
+  color: #e0e0e0;
 }
 
 /* QR */
@@ -97,6 +114,12 @@ body {
   border-radius: 10px;
 }
 
+.qr-text {
+  color: #c9a56a;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
 /* BOTÕES */
 .btn {
   display: block;
@@ -106,6 +129,7 @@ body {
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+  transition: 0.2s;
 }
 
 .btn-whats {
@@ -116,6 +140,10 @@ body {
 .btn-outline {
   border: 1px solid #d4af6a;
   color: #fff;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
 }
 </style>
 </head>
@@ -142,33 +170,37 @@ body {
     <div class="name">Juliana Rachid Calixto</div>
     <div class="role">Consultora Estratégica</div>
 
+    <!-- TELEFONE -->
     <div class="item">
       <div class="label">Telefone / WhatsApp</div>
-      <div class="value">19 98945-7404</div>
+      <div class="phone">19 98945-7404</div>
     </div>
 
+    <!-- EMAIL -->
     <div class="item">
       <div class="label">E-mail</div>
       <div class="value">juliana@verionconsultoria.com.br</div>
     </div>
 
+    <!-- SITE -->
     <div class="item">
       <div class="label">Site</div>
       <div class="value">www.verionconsultoria.com.br</div>
     </div>
 
+    <!-- LOCAL -->
     <div class="item">
       <div class="label">Localização</div>
       <div class="value">Campinas - SP, Brasil</div>
     </div>
 
+    <!-- QR -->
     <div class="qr">
       <img src="assets/qrcode.png">
-      <div style="color:#d4af6a; font-size:12px; margin-top:10px;">
-        Escaneie o QR Code
-      </div>
+      <div class="qr-text">Escaneie o QR Code</div>
     </div>
 
+    <!-- BOTÕES -->
     <a class="btn btn-whats" href="https://wa.me/5519989457404" target="_blank">
       FALAR NO WHATSAPP
     </a>
